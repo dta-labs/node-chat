@@ -1,1 +1,13 @@
-<p>chat works!</p>
+<div class="row">
+    <div class="col s12">
+        <label for="user">Hola {{userChat.name}}... escribe algo</label>
+        <input type="text" (change)="myMessage()" [(ngModel)]="userChat.text">
+    </div>
+    <div class="col s12">
+        <div *ngFor="let a of myMessages">
+            <label for="chat"><b>{{ a.user }}</b></label>
+            <span>{{ a.text }}</span>
+        </div>
+            
+    </div>
+</div>

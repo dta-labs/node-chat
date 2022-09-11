@@ -1,1 +1,10 @@
-<p>home works!</p>
+
+<div class="row" style="width:50%; margin:auto;">
+    <div class="input-field col s6">
+      <input placeholder="Entre su nombre" id="first_name" type="text" class="validate" [(ngModel)]="User.name">
+      <label for="first_name">Nombre</label>
+    </div>
+    <div class="input-field col s12">
+        <a class="waves-effect waves-light btn" [routerLink]="['/chat', User.name]">Ingresar al chat</a>
+    </div>
+</div>
